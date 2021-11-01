@@ -1,6 +1,6 @@
 {
   "name": "megajs-2",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Unofficial JavaScript SDK for MEGA",
   "main": "dist/main.node-cjs.js",
   "module": "dist/main.node-es.js",
@@ -21,6 +21,7 @@
     "storage"
   ],
   "scripts": {
+    "pub": "cross-env BABEL_ENV=build node build && nrm use npm && npm publish",
     "build": "cross-env BABEL_ENV=build node build",
     "test": "npm run lint && npm run ava-node && npm run ava-browser",
     "lint": "standard",
